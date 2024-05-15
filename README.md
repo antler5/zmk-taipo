@@ -7,6 +7,7 @@ The official description of the layout can be found on the [Inclusive Keyboards 
 
 - Ferris Sweep (aka cradio)
 - Corne (untested)
+- Lily58
 
 ## Usage
 
