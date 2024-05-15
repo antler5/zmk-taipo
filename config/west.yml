@@ -1,11 +1,11 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+    - name: antler5
+      url-base: https://github.com/antler5
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: antler5
+      revision: split-combos
       import: app/west.yml
   self:
     path: config
