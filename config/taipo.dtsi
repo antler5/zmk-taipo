@@ -1,51 +1,62 @@
+#define LPOS <TLI TLM TLR TLP BLI BLM BLR BLP LOT LIT>
+#define RPOS <TRI TRM TRR TRP BRI BRM BRR BRP ROT RIT>
+
 #define TCOMBO(NAME, BINDINGS, OUTER_BINDINGS, INNER_BINDINGS, BOTH_BINDINGS, LEFT_KEYPOS, RIGHT_KEYPOS) \
 combo_l_##NAME { \
 	timeout-ms = <COMBO_TIMEOUT>; \
 	bindings = <BINDINGS>; \
 	key-positions = <LEFT_KEYPOS>; \
 	layers = <COMBO_LAYERS>; \
+	region = LPOS; \
 }; \
 combo_li_##NAME { \
 	timeout-ms = <COMBO_TIMEOUT>; \
 	bindings = <INNER_BINDINGS>; \
 	key-positions = <LEFT_KEYPOS LIT>; \
 	layers = <COMBO_LAYERS>; \
+	region = LPOS; \
 }; \
 combo_lo_##NAME { \
 	timeout-ms = <COMBO_TIMEOUT>; \
 	bindings = <OUTER_BINDINGS>; \
 	key-positions = <LEFT_KEYPOS LOT>; \
 	layers = <COMBO_LAYERS>; \
+	region = LPOS; \
 }; \
 combo_lb_##NAME { \
 	timeout-ms = <COMBO_TIMEOUT>; \
 	bindings = <BOTH_BINDINGS>; \
 	key-positions = <LEFT_KEYPOS LIT LOT>; \
 	layers = <COMBO_LAYERS>; \
+	region = LPOS; \
 }; \
 combo_r_##NAME { \
 	timeout-ms = <COMBO_TIMEOUT>; \
 	bindings = <BINDINGS>; \
 	key-positions = <RIGHT_KEYPOS>; \
 	layers = <COMBO_LAYERS>; \
+	region = RPOS; \
 }; \
 combo_ri_##NAME { \
 	timeout-ms = <COMBO_TIMEOUT>; \
 	bindings = <INNER_BINDINGS>; \
 	key-positions = <RIGHT_KEYPOS RIT>; \
 	layers = <COMBO_LAYERS>; \
+	region = RPOS; \
 }; \
 combo_ro_##NAME { \
 	timeout-ms = <COMBO_TIMEOUT>; \
 	bindings = <OUTER_BINDINGS>; \
 	key-positions = <RIGHT_KEYPOS ROT>; \
 	layers = <COMBO_LAYERS>; \
+	region = RPOS; \
 }; \
 combo_rb_##NAME { \
 	timeout-ms = <COMBO_TIMEOUT>; \
 	bindings = <BOTH_BINDINGS>; \
 	key-positions = <RIGHT_KEYPOS RIT ROT>; \
 	layers = <COMBO_LAYERS>; \
+	region = RPOS; \
 };
 
 combo_l_space { \
@@ -53,6 +64,7 @@ combo_l_space { \
 	bindings = <&kp SPACE>; \
 	key-positions = <LOT>; \
 	layers = <COMBO_LAYERS>; \
+	region = LPOS; \
 };
 
 combo_r_space { \
@@ -60,6 +72,7 @@ combo_r_space { \
 	bindings = <&kp SPACE>; \
 	key-positions = <ROT>; \
 	layers = <COMBO_LAYERS>; \
+	region = RPOS; \
 };
 
 combo_l_bspc { \
@@ -67,6 +80,7 @@ combo_l_bspc { \
 	bindings = <&kp BSPC>; \
 	key-positions = <LIT>; \
 	layers = <COMBO_LAYERS>; \
+	region = LPOS; \
 };
 
 combo_r_bspc { \
@@ -74,6 +88,7 @@ combo_r_bspc { \
 	bindings = <&kp BSPC>; \
 	key-positions = <RIT>; \
 	layers = <COMBO_LAYERS>; \
+	region = RPOS; \
 };
 
 TCOMBO(R,      &kp R,      &kp LS(R), &kp GT,     &kp PSCRN,    TLP,         TRP)
