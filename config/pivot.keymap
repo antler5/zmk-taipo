@@ -11,7 +11,9 @@
 
 // CONFIG
 #define COMBO_TIMEOUT 70
-#define COMBO_LAYERS 0
+#define BASE_COMBO_LAYERS 0
+#define FUNC_COMBO_LAYER_1 1
+#define FUNC_COMBO_LAYER_2 2
 #define STICKY_TIMEOUT 500
 
 // LEFT SIDE
@@ -53,6 +55,26 @@
     compatible = "zmk,keymap";
 
     default_layer {
+      bindings = <
+               &none  &none  &none  &none  &none  &none  &none  &none
+               &none  &none  &none  &none  &none  &none  &none  &none
+                             &none  &none  &none  &none
+        &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N5 &kp N4 &kp N3 &kp N2 &kp N1
+        /*  LD     LB     LF     LU     LI     RI     RU     RF     RB     RD */
+      >;
+    };
+
+    function_layer_1 {
+      bindings = <
+               &none  &none  &none  &none  &none  &none  &none  &none
+               &none  &none  &none  &none  &none  &none  &none  &none
+                             &none  &none  &none  &none
+        &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N5 &kp N4 &kp N3 &kp N2 &kp N1
+        /*  LD     LB     LF     LU     LI     RI     RU     RF     RB     RD */
+      >;
+    };
+
+    function_layer_2 {
       bindings = <
                &none  &none  &none  &none  &none  &none  &none  &none
                &none  &none  &none  &none  &none  &none  &none  &none
